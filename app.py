@@ -15,6 +15,13 @@ def profile_page(id):
     cat = cats_info(id)
     return render_template("cat.html",cat=cat)
 
+@app.route('/cats/create',methods=['GET', 'POST'])
+    def new_cat():
+        create_cat()
+        return render_template("newcat.html",)
+
+
+
 if __name__ == '__main__':
    app.run(debug = True)
 
