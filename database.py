@@ -20,6 +20,3 @@ def get_all_cats():
 def cats_info(id):
     cat = session.query(Cat).filter_by(id=id).first()
     return cat 
-
-def create_cat(name):
-    pass
